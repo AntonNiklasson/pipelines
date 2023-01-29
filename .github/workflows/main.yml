@@ -1,0 +1,15 @@
+name: learn-github-actions
+run-name: hello world
+on: [push]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.25.1
+      - run: pnpm install
+      - run: pnpm lint
+      - run: pnpm format -- --check
+      - run: pnp test
