@@ -1,15 +1,31 @@
 name: learn-github-actions
-run-name: hello world
+run-name: workflow playground
 on: [push]
 jobs:
-  validate:
+  install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7.25.1
+      - uses: actions/setup-node@v3
       - run: pnpm install
+  lint:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - run: pnpm lint
+  format:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - run: pnpm format:check
-      - run: pnp test
+  test:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: pnpm test
