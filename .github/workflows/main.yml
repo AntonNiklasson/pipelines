@@ -9,12 +9,12 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.2.4
       - uses: actions/setup-node@v3
-      - run: pnpm install
       - uses: actions/cache@v3
         with:
-          path: ~/.pnpm
+          path: ./node_modules
           key: v1-npm-deps-${{ hashFiles('**/package-lock.json') }}
           restore-keys: v1-npm-deps-
+      - run: pnpm install
   check:
     needs: install
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
       - uses: actions/setup-node@v3
       - uses: actions/cache@v3
         with:
-          path: ~/.pnpm
+          path: ./node_modules
           key: v1-npm-deps-${{ hashFiles('**/package-lock.json') }}
           restore-keys: v1-npm-deps-
       - run: pnpm lint
@@ -40,7 +40,7 @@ jobs:
       - uses: actions/setup-node@v3
       - uses: actions/cache@v3
         with:
-          path: ~/.pnpm
+          path: ./node_modules
           key: v1-npm-deps-${{ hashFiles('**/package-lock.json') }}
           restore-keys: v1-npm-deps-
       - run: pnpm test
