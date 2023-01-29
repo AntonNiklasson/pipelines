@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm",
+  "packageManager": "pnpm@7",
   "scripts": {
     "lint": "pnpm run --parallel lint",
     "test": "pnpm run test",
