@@ -1,4 +1,4 @@
-import { describe, it } from "vitest";
+import { expect, describe, it } from "vitest";
 import { multiply } from "./index";
 
 describe("multiply", () => {

@@ -1,28 +1,13 @@
 {
-  "name": "github-pipelines",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "vitest src",
     "format": "prettier --write src",
     "lint": "eslint src/**"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AntonNiklasson/pipelines.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AntonNiklasson/pipelines/issues"
-  },
-  "homepage": "https://github.com/AntonNiklasson/pipelines#readme",
   "dependencies": {
     "prettier": "^2.8.3",
-    "vitest": "^0.28.3"
-  },
-  "devDependencies": {
+    "vitest": "^0.28.3",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^33.0.0",
