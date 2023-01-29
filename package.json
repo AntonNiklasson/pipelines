@@ -1,10 +1,10 @@
 {
   "private": true,
-  "packageManager": "pnpm@7",
+  "packageManager": "pnpm@7.25.1",
   "scripts": {
     "lint": "pnpm run --parallel lint",
-    "test": "pnpm run test",
-    "format:check": "pnpm run format:check"
+    "test": "pnpm run --parallel test",
+    "format:check": "pnpm run --parallel format:check"
   },
   "dependencies": {
     "eslint": "^8.33.0",
