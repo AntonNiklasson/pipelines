@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "vitest src",
+    "test": "vitest run src",
     "format:check": "prettier --check .",
     "lint": "eslint src/**"
   },
