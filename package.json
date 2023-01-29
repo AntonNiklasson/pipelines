@@ -2,9 +2,9 @@
   "private": true,
   "packageManager": "pnpm@7.25.1",
   "scripts": {
-    "lint": "pnpm run --parallel lint",
-    "test": "pnpm run --parallel test",
-    "format:check": "pnpm run --parallel format:check"
+    "lint": "pnpm multi run lint",
+    "test": "pnpm multi run test",
+    "format:check": "pnpm multi run format:check"
   },
   "dependencies": {
     "eslint": "^8.33.0",
