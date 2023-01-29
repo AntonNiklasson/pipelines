@@ -1,5 +1,4 @@
-name: learn-github-actions
-run-name: workflow playground
+name: client
 on: [push]
 jobs:
   install:
